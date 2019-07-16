@@ -199,28 +199,7 @@ app.get(baseUrl+'/view/:blogId',auth.isAuthenticated,blogController.getSingleBlo
      */
 
 
-app.get("/calculate/age",function(req,res){
-     let currenYear=new Date().getFullYear();
-       console.log(req.query.dob)
-     let birthYear=new Date(req.query.do).getFullYear();
-     
-     let age=currenYear - birthYear;
-     let currentage={
-          "age":age
-     }
-     res.send(currentage)
-})
-
-  app.get("/name",(req,res)=>{
-          
-     let name=req.query.name.split(' ')
-          
-     let splitedName={
-          firstName:name[0],
-          latName:name[1]
-     }   
-     res.send(splitedName)
-  })
+app.get(baseUrl+"/all",blogController.getALLBlogs)
 
      /**
      * @api {get} /api/v1/blogs/all getAllBlogs
