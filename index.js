@@ -4,7 +4,7 @@ const http = require('http')
 const appConfig = require('./config/appConfig')
 const fs = require('fs')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const globalErrorMiddleWare = require('./middleware/appErrorHandler')
 const routeLoggerMiddleware = require('./middleware/routeLogger')
@@ -12,8 +12,8 @@ const helmet = require('helmet')
 // const logger = require('./libs/loggerLib')
 const WebSocket = require('ws');
 const cors = require('cors');
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 
